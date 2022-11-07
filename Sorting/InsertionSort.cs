@@ -64,36 +64,36 @@ namespace Sorting
                         pictureBoxes[i].Image = Image.FromFile("../nums/0.png");
                         break;
                     case 1:
-                        pictureBoxes[i].Image = Image.FromFile("nums/1.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/1.png");
                         break;
                     case 2:
-                        pictureBoxes[i].Image = Image.FromFile("nums/2.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/2.png");
                         break;
                     case 3:
-                        pictureBoxes[i].Image = Image.FromFile("nums/3.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/3.png");
                         break;
                     case 4:
-                        pictureBoxes[i].Image = Image.FromFile("nums/4.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/4.png");
                         break;
                     case 5:
-                        pictureBoxes[i].Image = Image.FromFile("nums/5.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/5.png");
                         break;
                     case 6:
-                        pictureBoxes[i].Image = Image.FromFile("nums/6.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/6.png");
                         break;
                     case 7:
-                        pictureBoxes[i].Image = Image.FromFile("nums/7.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/7.png");
                         break;
                     case 8:
-                        pictureBoxes[i].Image = Image.FromFile("nums/8.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/8.png");
                         break;
                     case 9:
-                        pictureBoxes[i].Image = Image.FromFile("nums/9.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/9.png");
                         break;
                     default:
                         break;
                 }
-                pictures.Controls.Add(pictureBoxes[i]);
+                        pictures.Controls.Add(pictureBoxes[i]);
             }
             this.Controls.Add(pictures);
 
