@@ -56,44 +56,59 @@ namespace Sorting
                 pictureBoxes[i].Height = pictures.Height;
                 pictureBoxes[i].Width = pictures.Height;
                 pictureBoxes[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                if (i != 0) pictureBoxes[i].Location = new Point(pictureBoxes[i-1].Location.X + pictureBoxes[i].Width + 40,
+                if (i > 0) pictureBoxes[i].Location = new Point(pictureBoxes[i-1].Location.X + pictureBoxes[i].Width + 40,
                     pictureBoxes[i - 1].Location.Y);
                 switch (numbers[i])
                 {
                     case 0:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/0.png");
+                        pictureBoxes[i].Image = Image.FromFile("../nums/0.png");
                         break;
                     case 1:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/1.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/1.png");
                         break;
                     case 2:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/2.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/2.png");
                         break;
                     case 3:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/3.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/3.png");
                         break;
                     case 4:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/4.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/4.png");
                         break;
                     case 5:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/5.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/5.png");
                         break;
                     case 6:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/6.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/6.png");
                         break;
                     case 7:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/7.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/7.png");
                         break;
                     case 8:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/8.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/8.png");
                         break;
                     case 9:
-                        pictureBoxes[i].Image = Image.FromFile("D:/nums/9.png");
+                        pictureBoxes[i].Image = Image.FromFile("nums/9.png");
+                        break;
+                    default:
                         break;
                 }
                 pictures.Controls.Add(pictureBoxes[i]);
             }
             this.Controls.Add(pictures);
+
+            int index, currentNumber;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                index = i;
+                currentNumber = numbers[i];
+                while (index > 0 && currentNumber < numbers[index - 1])
+                {
+                    numbers[index] = numbers[index - 1];
+                    index--;
+                }
+                numbers[index] = currentNumber;
+            }
 
         }
 
